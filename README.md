@@ -11,7 +11,7 @@ https://github.com/hebingchang/Yet-Another-Tieba-Sign
 npm install
 npm run dev
 ```
-Remember to configure `config/dev.env.js` with the backend address.
+Remember to configure `config/dev.env.js` with the backend address and app id / secret.
 ## Thanks to
  [vueAdmin-template](https://github.com/PanJiaChen/vueAdmin-template)
 

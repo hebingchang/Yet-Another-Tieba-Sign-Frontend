@@ -10,7 +10,7 @@ export function login(username, password) {
       'password': password,
       'grant_type': 'password',
       'client_id': process.env.APP_ID,
-      'client_secret': process.env.APP_SECRET,
+      'client_secret': process.env.APP_SECRET
     })
   })
 }
