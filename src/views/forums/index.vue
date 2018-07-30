@@ -28,7 +28,7 @@
             label="贴吧名称"
             sortable
             fixed
-            width="200px">
+            width="150px">
             <template slot-scope="scope">
               <a :href="'http://tieba.baidu.com/f?kw=' + scope.row.forum_name" class="el-button el-button--text" style="text-decoration: none;" target="_blank"><span>{{ scope.row.forum_name }}</span></a>
 
