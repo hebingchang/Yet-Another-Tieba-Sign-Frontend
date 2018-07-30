@@ -9,8 +9,8 @@ export function login(username, password) {
       'username': username + '@boar.tech',
       'password': password,
       'grant_type': 'password',
-      'client_id': 2,
-      'client_secret': 'eVwdRGgh0LE8lwVGj1bH6WDUB5nKvrrKGVj86Kjd'
+      'client_id': process.env.APP_ID,
+      'client_secret': process.env.APP_SECRET,
     })
   })
 }
