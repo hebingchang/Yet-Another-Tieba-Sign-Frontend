@@ -2,6 +2,9 @@
 
 > Frontend for tieba signing tool
 
+## Backend
+https://github.com/hebingchang/Yet-Another-Tieba-Sign
+
 ## Develop Build Setup
 
 ``` bash
