@@ -63,17 +63,14 @@ export const constantRouterMap = [
     path: '/sign',
     component: Layout,
     redirect: '/sign/records',
-    name: 'sign',
-    meta: {
-      title: '签到',
-      icon: 'nested'
-    },
+    name: 'Sign',
+    meta: { title: '签到', icon: 'nested' },
     children: [
       {
         path: 'records',
         component: () => import('@/views/records/index'),
         name: 'Record',
-        meta: { title: '签到记录' }
+        meta: { title: '签到记录', icon: 'tree' }
       }
     ]
   },
