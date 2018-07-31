@@ -2,25 +2,44 @@
   <div class="login-container">
     <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
       <h3 class="title">Tieba Sign</h3>
-      <el-form-item prop="username">
-        <span class="svg-container svg-container_login">
-          <svg-icon icon-class="user" />
-        </span>
-        <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="username" />
-      </el-form-item>
-      <el-form-item prop="password">
-        <span class="svg-container">
-          <svg-icon icon-class="password"></svg-icon>
-        </span>
-        <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on"
-          placeholder="password"></el-input>
-          <span class="show-pwd" @click="showPwd"><svg-icon icon-class="eye" /></span>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">
-          Sign in
-        </el-button>
-      </el-form-item>
+      <el-row>
+        <el-col :xs="0" :sm="3" :md="4" :lg="8" :xl="8">&nbsp;</el-col>
+        <el-col :xs="24" :sm="18" :md="16" :lg="8" :xl="8">
+          <el-form-item prop="username">
+            <span class="svg-container svg-container_login">
+              <svg-icon icon-class="user" />
+            </span>
+            <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="用户名" />
+          </el-form-item>
+        </el-col>
+
+      </el-row>
+
+      <el-row>
+        <el-col :xs="0" :sm="3" :md="4" :lg="8" :xl="8">&nbsp;</el-col>
+        <el-col :xs="24" :sm="18" :md="16" :lg="8" :xl="8">
+          <el-form-item prop="password">
+            <span class="svg-container">
+              <svg-icon icon-class="password"></svg-icon>
+            </span>
+            <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on"
+                      placeholder="密码"></el-input>
+            <span class="show-pwd" @click="showPwd"><svg-icon icon-class="eye" /></span>
+          </el-form-item>
+        </el-col>
+      </el-row>
+
+      <el-row>
+        <el-col :xs="0" :sm="3" :md="4" :lg="10" :xl="10">&nbsp;</el-col>
+        <el-col :xs="24" :sm="18" :md="16" :lg="4" :xl="4">
+          <el-form-item>
+            <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">
+              登录
+            </el-button>
+          </el-form-item>
+        </el-col>
+      </el-row>
+
     </el-form>
   </div>
 </template>
@@ -133,7 +152,7 @@ $light_gray:#eee;
     position: absolute;
     left: 0;
     right: 0;
-    width: 520px;
+    width: 100%;
     padding: 35px 35px 15px 35px;
     margin: 120px auto;
   }
