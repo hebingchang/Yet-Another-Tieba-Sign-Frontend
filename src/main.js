@@ -15,9 +15,13 @@ import store from './store'
 import '@/icons' // icon
 import '@/permission' // permission control
 import VueClipboard from 'vue-clipboard2'
-import VueResource from 'vue-resource'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUser, faComments, faCalendarAlt, faStar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faUser, faComments, faCalendarAlt, faStar)
 
-Vue.use(VueResource)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.use(VueClipboard)
 Vue.use(ElementUI, { locale })
 
