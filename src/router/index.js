@@ -23,6 +23,8 @@ import Layout from '../views/layout/Layout'
 **/
 export const constantRouterMap = [
   { path: '/login', component: () => import('@/views/login/index'), hidden: true },
+  { path: '/register', component: () => import('@/views/register/index'), hidden: true },
+
   { path: '/404', component: () => import('@/views/404'), hidden: true },
 
   {
@@ -87,6 +89,12 @@ export const constantRouterMap = [
         component: () => import('@/views/password/index'),
         name: 'Password',
         meta: { title: '修改密码', icon: 'password' }
+      },
+      {
+        path: 'invite',
+        component: () => import('@/views/invite/index'),
+        name: 'Invite',
+        meta: { title: '邀请码', icon: 'user' }
       }
     ]
   },

@@ -40,6 +40,17 @@
         </el-col>
       </el-row>
 
+      <el-row>
+        <el-col :xs="0" :sm="3" :md="4" :lg="10" :xl="10">&nbsp;</el-col>
+        <el-col :xs="24" :sm="18" :md="16" :lg="4" :xl="4">
+          <el-form-item>
+            <router-link to="/register" tag="el-button" style="width:100%;" plain>
+              注册
+            </router-link>
+          </el-form-item>
+        </el-col>
+      </el-row>
+
     </el-form>
   </div>
 </template>
@@ -66,8 +77,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: 'admin'
+        username: '',
+        password: ''
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],

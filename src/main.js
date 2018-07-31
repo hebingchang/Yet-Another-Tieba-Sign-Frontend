@@ -14,7 +14,9 @@ import store from './store'
 
 import '@/icons' // icon
 import '@/permission' // permission control
+import VueClipboard from 'vue-clipboard2'
 
+Vue.use(VueClipboard)
 Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
