@@ -89,22 +89,9 @@
       background: #fff;
       box-shadow: 4px 4px 40px rgba(0, 0, 0, .05);
       border-color: rgba(0, 0, 0, .05);
+      transition: box-shadow 0.38s ease-out;
       &:hover {
-        .card-panel-icon-wrapper {
-          color: #fff;
-        }
-        .icon-people {
-          background: #40c9c6;
-        }
-        .icon-message {
-          background: #36a3f7;
-        }
-        .icon-money {
-          background: #f4516c;
-        }
-        .icon-shoppingCard {
-          background: #34bfa3
-        }
+        box-shadow: 0 0 10px rgba(60, 60, 60, .5);
       }
       .icon-people {
         color: #40c9c6;
