@@ -6,7 +6,7 @@ import { getToken } from '@/utils/auth'
 // 创建axios实例
 const service = axios.create({
   baseURL: process.env.BASE_API, // api的base_url
-  timeout: 5000 // 请求超时时间
+  timeout: 60000 // 请求超时时间
 })
 
 // request拦截器
@@ -15,7 +15,6 @@ service.interceptors.request.use(config => {
     config.headers['Accept'] = 'application/json'
     config.headers['Authorization'] = 'Bearer ' + getToken()
   }
-  console.log(config)
   return config
 }, error => {
   // Do something with request error

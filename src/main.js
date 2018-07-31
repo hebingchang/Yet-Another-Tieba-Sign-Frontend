@@ -15,7 +15,9 @@ import store from './store'
 import '@/icons' // icon
 import '@/permission' // permission control
 import VueClipboard from 'vue-clipboard2'
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.use(VueClipboard)
 Vue.use(ElementUI, { locale })
 
@@ -25,5 +27,10 @@ new Vue({
   el: '#app',
   router,
   store,
+  http: {
+    headers: {
+      Authorization: 'Basic YXBpOnBhc3N3b3Jk'
+    }
+  },
   render: h => h(App)
 })
